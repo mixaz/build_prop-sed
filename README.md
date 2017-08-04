@@ -3,7 +3,7 @@ Script to update properties files via recovery, using sed command.
 Current code enables ADB in /system/build.prop, you can flash UPDATE-enable_adb.zip in TWRP.
 Following properties are set:
 
-persist.service.adb.enable=1                                                    
+persist.service.adb.enable=1
 persist.service.debuggable=1
 persist.sys.usb.config=mtp,adb
 
