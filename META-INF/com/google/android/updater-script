@@ -1,0 +1,11 @@
+ui_print("===== enabling ADB in build.prop ======");
+
+run_program("/sbin/busybox", "umount", "/system");
+run_program("/sbin/busybox", "mount", "/system");
+
+package_extract_dir("tmp", "/tmp");
+set_perm(0, 0, 0777, "/tmp/mytweaks.sh");
+run_program("/tmp/mytweaks.sh", "mytweak");
+
+run_program("/sbin/busybox", "umount", "/system");
+
