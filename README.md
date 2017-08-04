@@ -1,8 +1,16 @@
-Script to update properties files via recovery.
+Script to update properties files via recovery, using sed command.
 
-Current code enables ADB in /system/build.prop.
+Current code enables ADB in /system/build.prop, you can flash UPDATE-enable_adb.zip in TWRP.
+Following properties are set:
 
-The code taken from: https://forum.xda-developers.com/showpost.php?p=19093919&postcount=20
+persist.service.adb.enable=1                                                    
+persist.service.debuggable=1
+persist.sys.usb.config=mtp,adb
+
+You can place your own properties to tmp/update-build.prop, then just zip everything into update.zip, ie
+zip -r ../UPDATE.zip .
+
+The code was taken from: https://forum.xda-developers.com/showpost.php?p=19093919&postcount=20
 
 =====================================
 
